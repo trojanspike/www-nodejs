@@ -12,6 +12,6 @@ if [ $UID -ne 0 ]; then
 	exit 1
 else
     # is root | sudo , run init
-	echo "@ root"
+	echo "Running nodejs web manager installer"
 	init
 fi

@@ -2,10 +2,15 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-    config.vm.synced_folder "./", "/root",
+    config.vm.synced_folder "./", "/root/www-nodejs",
        	:owner =>"root", :group => "root", :mount_options => ['dmode=777,fmode=777']
-    config.vm.synced_folder "./www-nodejs", "/www/www-nodejs",
-           	:owner =>"www-nodejs", :group => "www-nodejs", :mount_options => ['dmode=755,fmode=644']
+
+  #  config.vm.synced_folder "./nodejs-webmanager", "/etc/nodejs-wm",
+  #             	:owner =>"www-nodejs", :group => "www-nodejs", :mount_options => ['dmode=755,fmode=644']
+
+  #  config.vm.synced_folder "./www-nodejs", "/www/www-nodejs",
+  #         	:owner =>"www-nodejs", :group => "www-nodejs", :mount_options => ['dmode=755,fmode=644']
+
 
     config.vm.provider :virtualbox do |box|
       		box.gui = false

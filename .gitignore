@@ -1,4 +1,4 @@
 .vagrant/
-.pki/
+_etc/
 .idea/
 .bash_history
